@@ -15,12 +15,6 @@ window.addEventListener('load', () => {
         path: '/stats',
         component: 'my-component',
         
-      },
-      {
-        path: '(.*)', 
-        component: 'not-found-view',
-        action: () =>
-          import(/* webpackChunkName: "not-found-view" */ './views/not-found-view')
       }
     ]);
   }
