@@ -1,0 +1,17 @@
+{
+  "name": "netlify",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "owc-dev-server -o"
+    
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lit-element": "^2.2.0",
+    "owc-dev-server": "^1.0.0"
+  }
+}
