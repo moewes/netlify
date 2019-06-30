@@ -16,5 +16,8 @@
     "owc-dev-server": "^1.0.0",
     "rimraf": "^2.6.3",
     "rollup": "^1.16.3"
+  },
+  "dependencies": {
+    "@vaadin/router": "^1.2.1"
   }
 }
