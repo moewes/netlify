@@ -32,4 +32,4 @@ class FetchingData extends LitElement {
   }
 }
 
-customElements.define('fetching-data', FetchingData);
+customElements.define('fetch-element', FetchingData);
