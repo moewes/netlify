@@ -17,8 +17,8 @@ window.addEventListener('load', () => {
         component: 'my-component',
       } ,
       {
-        path = '/fetch',
-        component = 'fetch-element',
+        path: '/fetch',
+        component: 'fetch-element',
       }
     ]);
   }
