@@ -1,4 +1,3 @@
-//import style from './styles.css';
 import { Router } from '@vaadin/router';
 
 window.addEventListener('load', () => { 
