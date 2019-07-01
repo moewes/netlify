@@ -16,7 +16,7 @@ class FetchingData extends LitElement {
     fetch('http://localhost:8080/people')
       .then((r) => r.json())
       .then((r) => {
-        this.response = r.results;
+        this.response = r;
       });
   }
 
