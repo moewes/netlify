@@ -18,6 +18,7 @@
     "rollup": "^1.16.3"
   },
   "dependencies": {
-    "@vaadin/router": "^1.2.1"
+    "@vaadin/router": "^1.2.1",
+    "rollup-plugin-postcss": "^2.0.3"
   }
 }

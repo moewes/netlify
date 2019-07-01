@@ -1,3 +1,4 @@
+//import style from './styles.css';
 import { Router } from '@vaadin/router';
 
 window.addEventListener('load', () => { 
@@ -14,7 +15,10 @@ window.addEventListener('load', () => {
       {
         path: '/stats',
         component: 'my-component',
-        
+      } ,
+      {
+        path = '/fetch',
+        component = 'fetch-element',
       }
     ]);
   }
