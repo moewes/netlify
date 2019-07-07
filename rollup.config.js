@@ -12,13 +12,13 @@ output: {
     dir: 'dist',
     format: 'cjs'
   },
-  name: 'MyModule',
+  
   plugins: [
     resolve(),
    // commonjs()
    cpy({
     // copy over all images files
-    files: ['**/*.html'],
+    files: ['./src/**/*.html','index.html'],
     dest: 'dist',
     options: {
       // parents makes sure to preserve the original folder structure
@@ -32,7 +32,19 @@ output: {
     dir: 'dist',
     format: 'iife',
   },
-  name: 'MyModule2',
+  
+  plugins: [
+    resolve(),
+   // commonjs()
+  ]
+},
+{
+  input: './src/my-component.js',
+  output: {
+    dir: 'dist',
+    format: 'iife',
+  },
+ 
   plugins: [
     resolve(),
    // commonjs()
