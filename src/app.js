@@ -5,11 +5,14 @@ window.addEventListener('load', () => {
   });
   
   function initRouter() {
-    const router = new Router(document.querySelector('main')); 
+    const router = new Router(document.querySelector('#main')); 
     router.setRoutes([
+      { path: '/',
+        animate: true,
+        component: 'my-component'},
       {
         path: '/',
-        component: 'todo-view'
+        component: 'my-component'
       },
       {
         path: '/stats',

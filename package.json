@@ -15,10 +15,12 @@
     "lit-element": "^2.2.0",
     "owc-dev-server": "^1.0.0",
     "rimraf": "^2.6.3",
-    "rollup": "^1.16.3"
+    "rollup": "^1.16.6"
   },
   "dependencies": {
+    "@ui5/webcomponents": "^1.0.0-rc.2",
     "@vaadin/router": "^1.2.1",
+    "rollup-plugin-cpy": "^2.0.0",
     "rollup-plugin-postcss": "^2.0.3"
   }
 }
