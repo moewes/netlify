@@ -8,7 +8,7 @@ class MyMainView extends LitElement {
 
   render() {
     return html`
-    <my-header></my-header>
+    <my-header pageTitle="Home"></my-header>
     
     <ui5-panel fixed="true">
       <ui5-title level="H1">Title level 1</ui5-title>

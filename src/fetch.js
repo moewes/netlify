@@ -4,26 +4,19 @@ import "@ui5/webcomponents/dist/Title";
 import "@ui5/webcomponents/dist/Timeline"
 import "@ui5/webcomponents/dist/TimelineItem"
 import "./my-header"
+import "./fetch-element"
 
 class MyFetchView extends LitElement {
 
     render() {
         return html`
-    <my-header></my-header>
+    <my-header pageTitle="Fetch Testseite" showBackIcon></my-header>
     <ui5-panel fixed="true">
         <ui5-title level="H3">fetch view</ui5-title>
         <div>Lorem ipsum lorem ipsum tbd</div>
+        <fetch-element></fetch-element>
     </ui5-panel>
-    <ui5-panel header-text="Changelog">
-        <ui5-timeline>
-            <ui5-timeline-item>
-                <div>Hallo Welt</div>
-            </ui5-timeline-item>
-            <ui5-timeline-item>
-                <div>Hallo Welt</div>
-            </ui5-timeline-item>
-        </ui5-timeline>
-    </ui5-panel>
+   
       
       `;
     }

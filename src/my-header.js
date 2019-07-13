@@ -3,11 +3,29 @@ import "@ui5/webcomponents/dist/ShellBar";
 
 class MyHeader extends LitElement {
 
+  static get properties() {
+    return { pageTitle: { type: String},
+             showBackIcon: {type: Boolean}
+     };
+  }
+
+  constructor() {
+    super();
+    this.pageTitle = 'PageTitle';
+    this.showBackIcon = false;
+  }
+
   render() {
     return html`
-    <ui5-shellbar id="shellbar" primary-title="My Cloud Playground" secondary-title="Home" show-product-switch
-      show-notifications logo="./logo.png" @productSwitchClick="${this.handleClick}">
-      <ui5-icon src="nav-back" slot="icon"></ui5-icon>
+    <ui5-shellbar id="shellbar" 
+    primary-title="My Cloud Playground" 
+    secondary-title="${this.pageTitle}" show-product-switch
+      show-notifications 
+      logo="./logo.png" 
+      @productSwitchClick="${this.handleClick}"
+      @logoClick="${this.goHome}">
+      ${this.showBackIcon? html`<ui5-icon src="nav-back" slot="icon" @click="${this.goHome}"></ui5-icon>`:html``}
+      
     </ui5-shellbar>
     
     <ui5-popover id="popover" placement-type="Bottom">
@@ -27,6 +45,10 @@ class MyHeader extends LitElement {
   handleClick(e) {
     let popover = this.shadowRoot.getElementById('popover');
     popover.openBy(e.detail.targetRef);
+  }
+
+  goHome(e) {
+    window.location = "./index.html"
   }
 
   openKeycloak(e) {

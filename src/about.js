@@ -9,7 +9,7 @@ class MyAboutView extends LitElement {
 
     render() {
         return html`
-    <my-header></my-header>
+    <my-header pageTitle="About" showBackIcon></my-header>
     <ui5-panel fixed="true">
         <ui5-title level="H3">About my cloud playground</ui5-title>
         <div>Lorem ipsum lorem ipsum tbd</div>
