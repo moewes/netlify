@@ -7,8 +7,8 @@ class MyComponent extends LitElement {
   render() {
     return html`
     <ui5-shellbar id="shellbar" primary-title="Corporate Portal" 
-      secondary-title="secondary title" s
-      how-product-switch
+      secondary-title="secondary title" 
+      show-product-switch
       show-notifications 
       @productSwitchClick="${this.handleClick}">
       <ui5-li slot="menuItems">Application 1</ui5-li>
@@ -17,8 +17,13 @@ class MyComponent extends LitElement {
       <ui5-li slot="menuItems">Application 4</ui5-li>
       <ui5-li slot="menuItems">Application 5</ui5-li>
     </ui5-shellbar>
+
+    <ui5-panel>
+    <ui5-title level="H1">Title level 1</ui5-title>
     <p>Hello world! automatic :-)</p>
     <ui5-button>Hello world!</ui5-button>
+    </ui5-panel>
+    
     
     <ui5-popover id="popover" placement-type="Bottom">
       <div class="popover-header">
