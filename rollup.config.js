@@ -22,7 +22,7 @@ output: {
    // commonjs()
    cpy({
     // copy over all images files
-    files: ['./src/**/*.html','index.html'],
+    files: ['./src/**/*.html','index.html', './src/**/*.png'],
     dest: 'dist',
     options: {
       // parents makes sure to preserve the original folder structure

@@ -8,24 +8,20 @@ class MyComponent extends LitElement {
 
   render() {
     return html`
-    <ui5-shellbar id="shellbar" primary-title="My Cloud Playground" 
-      secondary-title="Home" 
-      show-product-switch
-      show-notifications 
-      logo="./logo.png"
-      @productSwitchClick="${this.handleClick}">
-      
+    <ui5-shellbar id="shellbar" primary-title="My Cloud Playground" secondary-title="Home" show-product-switch
+      show-notifications logo="./logo.png" @productSwitchClick="${this.handleClick}">
+    
     </ui5-shellbar>
-
+    
     <ui5-panel fixed="true">
-    <ui5-title level="H1">Title level 1</ui5-title>
-    <p>Hello world! automatic :-)</p>
-    <ui5-button>Hello world!</ui5-button>
+      <ui5-title level="H1">Title level 1</ui5-title>
+      <p>Hello world! automatic :-)</p>
+      <ui5-button>Hello world!</ui5-button>
     </ui5-panel>
-    <ui5-panel header-text="Title" >
-    <ui5-title level="H1">Title level 1</ui5-title>
-    <p>Hello world! automatic :-)</p>
-    <ui5-button>Hello world!</ui5-button>
+    <ui5-panel header-text="Title">
+      <ui5-title level="H1">Title level 1</ui5-title>
+      <p>Hello world! automatic :-)</p>
+      <ui5-button>Hello world!</ui5-button>
     </ui5-panel>
     
     
