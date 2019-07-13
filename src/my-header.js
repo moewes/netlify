@@ -15,21 +15,13 @@ class MyHeader extends LitElement {
         <ui5-list separators="None">
           <ui5-li icon="sap-icon://key-user-settings" @click="${this.openKeycloak}">Keycloak</ui5-li>
           <ui5-li icon="sap-icon://database" @click="${this.openQuarkus}">Quarkus App on Openshift</ui5-li>
-          <ui5-li icon="sap-icon://sys-find">App Finder</ui5-li>
-          <ui5-li icon="sap-icon://settings" @click="${this.popoverClick}">Settings</ui5-li>
-          <ui5-li icon="sap-icon://edit">Edit Home Page</ui5-li>
-          <ui5-li icon="sap-icon://sys-help" @click="${this.openAbout}">Help</ui5-li>
-          <ui5-li icon="sap-icon://log">Sign out</ui5-li>
+          <ui5-li @click="${this.openTest}">Testseite</ui5-li>
+          <ui5-li @click="${this.openFetch}">Fetch Testseite</ui5-li>
+          <ui5-li icon="sap-icon://sys-help" @click="${this.openAbout}">About</ui5-li>
         </ui5-list>
       </div>
     </ui5-popover>
     `;
-  }
-
-  popoverClick(e) {
-    console.log("Halo");
-    window.dispatchEvent(
-      new CustomEvent('vaadin-router-go', { detail: { pathname: '/fetch' } }));
   }
 
   handleClick(e) {
@@ -45,8 +37,16 @@ class MyHeader extends LitElement {
     window.location = "https://ssl-mam-23701.apps.us-west-2.online-starter.openshift.com"
   }
 
-  openAbout(e) {
+  openTest(e) {
     window.location = "./test.html"
+  }
+
+  openFetch(e) {
+    window.location = "./fetch.html"
+  }
+
+  openAbout(e) {
+    window.location = "./about.html"
   }
 }
 
