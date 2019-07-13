@@ -22,7 +22,7 @@ output: {
    // commonjs()
    cpy({
     // copy over all images files
-    files: ['./src/**/*.html','index.html', './src/**/*.png'],
+    files: ['./src/**/*.html', './src/**/*.png', './src/**/*.css'],
     dest: 'dist',
     options: {
       // parents makes sure to preserve the original folder structure
@@ -36,7 +36,6 @@ output: {
     dir: 'dist',
     format: 'esm',
   },
-  
   plugins: [
     resolve(),
   ]
@@ -47,7 +46,6 @@ output: {
     dir: 'dist',
     format: 'esm',
   },
-  
   plugins: [
     resolve(),
   ]
@@ -58,9 +56,31 @@ output: {
     dir: 'dist',
     format: 'esm',
   },
- 
   plugins: [
     resolve(),
   ]
-}];
+},
+// Meine Views
+{
+  input: './src/about.js',
+  output: {
+    dir: 'dist',
+    format: 'esm',
+  },
+  plugins: [
+    resolve(),
+  ]
+},
+// Meine Komponenten
+{
+  input: './src/my-header.js',
+  output: {
+    dir: 'dist',
+    format: 'esm',
+  },
+  plugins: [
+    resolve(),
+  ]
+},
+];
 
