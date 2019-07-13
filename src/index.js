@@ -2,7 +2,7 @@ import { LitElement, html } from 'lit-element';
 import "@ui5/webcomponents/dist/Button";
 import "@ui5/webcomponents/dist/Panel"
 import "@ui5/webcomponents/dist/Title"
-import "./my-header.js"
+import "./my-header"
 
 class MyMainView extends LitElement {
 
