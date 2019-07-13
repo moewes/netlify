@@ -1,5 +1,5 @@
 import { Router } from '@vaadin/router';
-
+/*
 window.addEventListener('load', () => { 
     initRouter();
   });
@@ -11,7 +11,7 @@ window.addEventListener('load', () => {
         animate: true,
         component: 'my-component'},
       {
-        path: '/',
+        path: '/src/index',
         component: 'my-component'
       },
       {
@@ -24,3 +24,4 @@ window.addEventListener('load', () => {
       }
     ]);
   }
+  */

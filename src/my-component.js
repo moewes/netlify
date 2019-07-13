@@ -8,19 +8,21 @@ class MyComponent extends LitElement {
 
   render() {
     return html`
-    <ui5-shellbar id="shellbar" primary-title="Corporate Portal" 
-      secondary-title="secondary title" 
+    <ui5-shellbar id="shellbar" primary-title="My Cloud Playground" 
+      secondary-title="Home" 
       show-product-switch
       show-notifications 
+      logo="./logo.png"
       @productSwitchClick="${this.handleClick}">
-      <ui5-li slot="menuItems">Application 1</ui5-li>
-      <ui5-li slot="menuItems">Application 2</ui5-li>
-      <ui5-li slot="menuItems">Application 3</ui5-li>
-      <ui5-li slot="menuItems">Application 4</ui5-li>
-      <ui5-li slot="menuItems">Application 5</ui5-li>
+      
     </ui5-shellbar>
 
-    <ui5-panel>
+    <ui5-panel fixed="true">
+    <ui5-title level="H1">Title level 1</ui5-title>
+    <p>Hello world! automatic :-)</p>
+    <ui5-button>Hello world!</ui5-button>
+    </ui5-panel>
+    <ui5-panel header-text="Title" >
     <ui5-title level="H1">Title level 1</ui5-title>
     <p>Hello world! automatic :-)</p>
     <ui5-button>Hello world!</ui5-button>
@@ -28,11 +30,11 @@ class MyComponent extends LitElement {
     
     
     <ui5-popover id="popover" placement-type="Bottom">
-      <div class="popover-header">
-        <ui5-title style="padding: 0.25rem 1rem 0rem 1rem">An Kimura</ui5-title>
-      </div>
+    
       <div class="popover-content">
         <ui5-list separators="None">
+          <ui5-li icon="sap-icon://key-user-settings" @click="${this.openKeycloak}">Keycloak</ui5-li>
+          <ui5-li icon="sap-icon://database" @click="${this.openQuarkus}">Quarkus App on Openshift</ui5-li>
           <ui5-li icon="sap-icon://sys-find">App Finder</ui5-li>
           <ui5-li icon="sap-icon://settings" @click="${this.popoverClick}">Settings</ui5-li>
           <ui5-li icon="sap-icon://edit">Edit Home Page</ui5-li>
@@ -53,6 +55,14 @@ class MyComponent extends LitElement {
   handleClick(e) {
     let popover = this.shadowRoot.getElementById('popover');
     popover.openBy(e.detail.targetRef);
+  }
+
+  openKeycloak(e) {
+    window.location = "https://oidc-mam-23701.apps.us-west-2.online-starter.openshift.com"
+  }
+
+  openQuarkus(e) {
+    window.location = "https://ssl-mam-23701.apps.us-west-2.online-starter.openshift.com"
   }
 }
 
