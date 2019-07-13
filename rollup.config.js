@@ -40,29 +40,40 @@ output: {
     resolve(),
   ]
 },
-{
-  input: './src/views/test.js',
-  output: {
-    dir: 'dist',
-    format: 'esm',
-  },
-  plugins: [
-    resolve(),
-  ]
-},
-{
-  input: './src/my-component.js',
-  output: {
-    dir: 'dist',
-    format: 'esm',
-  },
-  plugins: [
-    resolve(),
-  ]
-},
+
 // Meine Views
 {
+  input: './src/index.js',
+  output: {
+    dir: 'dist',
+    format: 'esm',
+  },
+  plugins: [
+    resolve(),
+  ]
+},
+{
   input: './src/about.js',
+  output: {
+    dir: 'dist',
+    format: 'esm',
+  },
+  plugins: [
+    resolve(),
+  ]
+},
+{
+  input: './src/test.js',
+  output: {
+    dir: 'dist',
+    format: 'esm',
+  },
+  plugins: [
+    resolve(),
+  ]
+},
+{
+  input: './src/fetch.js',
   output: {
     dir: 'dist',
     format: 'esm',
