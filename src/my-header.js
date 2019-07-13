@@ -1,32 +1,16 @@
 import { LitElement, html } from 'lit-element';
-import "@ui5/webcomponents/dist/Button";
 import "@ui5/webcomponents/dist/ShellBar";
-import "@ui5/webcomponents/dist/Panel"
-import "@ui5/webcomponents/dist/Title"
 
-class MyComponent extends LitElement {
+class MyHeader extends LitElement {
 
   render() {
     return html`
     <ui5-shellbar id="shellbar" primary-title="My Cloud Playground" secondary-title="Home" show-product-switch
       show-notifications logo="./logo.png" @productSwitchClick="${this.handleClick}">
-    
+      <ui5-icon src="nav-back" slot="icon"></ui5-icon>
     </ui5-shellbar>
     
-    <ui5-panel fixed="true">
-      <ui5-title level="H1">Title level 1</ui5-title>
-      <p>Hello world! automatic :-)</p>
-      <ui5-button>Hello world!</ui5-button>
-    </ui5-panel>
-    <ui5-panel header-text="Title">
-      <ui5-title level="H1">Title level 1</ui5-title>
-      <p>Hello world! automatic :-)</p>
-      <ui5-button>Hello world!</ui5-button>
-    </ui5-panel>
-    
-    
     <ui5-popover id="popover" placement-type="Bottom">
-    
       <div class="popover-content">
         <ui5-list separators="None">
           <ui5-li icon="sap-icon://key-user-settings" @click="${this.openKeycloak}">Keycloak</ui5-li>
@@ -66,4 +50,4 @@ class MyComponent extends LitElement {
   }
 }
 
-customElements.define('my-component', MyComponent);
+customElements.define('my-header', MyHeader);
