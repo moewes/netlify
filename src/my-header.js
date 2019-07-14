@@ -36,6 +36,7 @@ class MyHeader extends LitElement {
           <ui5-li @click="${this.openTest}">Testseite</ui5-li>
           <ui5-li @click="${this.openFetch}">Fetch Testseite</ui5-li>
           <ui5-li icon="sap-icon://sys-help" @click="${this.openAbout}">About</ui5-li>
+          <ui5-li icon="sap-icon://sys-help" @click="${this.openGitHub}">Github Pages</ui5-li>
         </ui5-list>
       </div>
     </ui5-popover>
@@ -69,6 +70,10 @@ class MyHeader extends LitElement {
 
   openAbout(e) {
     window.location = "./about.html"
+  }
+
+  openAbout(e) {
+    window.location = "https://moewes.github.io/mycloudplayground"
   }
 }
 

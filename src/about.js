@@ -17,6 +17,9 @@ class MyAboutView extends LitElement {
     <ui5-panel header-text="Changelog">
         <ui5-timeline>
             <ui5-timeline-item>
+                <div>document projekt on github pages</div>
+            </ui5-timeline-item>
+            <ui5-timeline-item>
                 <div>Hallo Welt</div>
             </ui5-timeline-item>
             <ui5-timeline-item>
