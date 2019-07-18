@@ -72,7 +72,7 @@ class MyHeader extends LitElement {
     window.location = "./about.html"
   }
 
-  openAbout(e) {
+  openGithub(e) {
     window.location = "https://moewes.github.io/mycloudplayground"
   }
 }
