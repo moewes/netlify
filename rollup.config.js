@@ -93,16 +93,6 @@ output: {
     resolve(),
   ]
 },
-{
-  input: './src/githubpages.js',
-  output: {
-    dir: 'dist',
-    format: 'esm',
-  },
-  plugins: [
-    resolve(),
-  ]
-},
 
 ];
 
