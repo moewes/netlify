@@ -11,18 +11,28 @@ class MyMainView extends LitElement {
     return html`
     <my-header pageTitle="Home"></my-header>
     <my-header-panel></my-header-panel>
-    <ui5-panel fixed="true">
-      <ui5-title level="H1">Title level 1</ui5-title>
-      <p>Hello world! automatic :-)</p>
-      <ui5-button>Hello world!</ui5-button>
+    <ui5-panel header-text="Fetch Test">
+      <div>
+        <ui5-label>Display some UI5-Elements</ui5-label>
+      </div>
+      <ui5-button @click="${this.startFetch}">Start</ui5-button>
     </ui5-panel>
-    <ui5-panel header-text="Title">
-      <ui5-title level="H1">Title level 1</ui5-title>
-      <p>Hello world! automatic :-)</p>
-      <ui5-button>Hello world!</ui5-button>
+    <ui5-panel header-text="Useless UI5 Testseite">
+      <div>
+        <ui5-label>Display some UI5-Elements</ui5-label>
+      </div>
+      <ui5-button @click="${this.startTestseite}">Start</ui5-button>
     </ui5-panel>
     `;
-  } 
+  }
+
+  startTestseite(e) {
+    window.location = "./test.html";
+  }
+
+  startFetch(e) {
+    window.location = "./fetch.html";
+  }
 }
 
 customElements.define('my-main-view', MyMainView);
