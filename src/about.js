@@ -1,36 +1,34 @@
 import { LitElement, html } from 'lit-element';
 import "@ui5/webcomponents/dist/Panel";
 import "@ui5/webcomponents/dist/Title";
-import "@ui5/webcomponents/dist/Timeline"
-import "@ui5/webcomponents/dist/TimelineItem"
-import "./my-header"
+import "@ui5/webcomponents/dist/Timeline";
+import "@ui5/webcomponents/dist/TimelineItem";
+import "@ui5/webcomponents/dist/Label";
+import "./my-header";
+import "./my-header-panel";
 
 class MyAboutView extends LitElement {
 
     render() {
         return html`
     <my-header pageTitle="About" showBackIcon></my-header>
-    <ui5-panel fixed="true">
-        <ui5-title level="H3">About my cloud playground</ui5-title>
-        <div>Lorem ipsum lorem ipsum tbd</div>
-    </ui5-panel>
+    <my-header-panel></my-header-panel>
     <ui5-panel header-text="Changelog">
         <ui5-timeline>
-            <ui5-timeline-item>
-                <div>document projekt on github pages</div>
+            <ui5-timeline-item icon="sap-icon://calendar" title-text="Github Pages for project">
+    
             </ui5-timeline-item>
-            <ui5-timeline-item>
-                <div>Hallo Welt</div>
+            <ui5-timeline-item icon="sap-icon://calendar" title-text="Init beackend project with quarkus on openshift">
+    
             </ui5-timeline-item>
-            <ui5-timeline-item>
-                <div>Hallo Welt</div>
+            <ui5-timeline-item icon="sap-icon://calendar" title-text="Init frontend project on netlify.com">
+    
             </ui5-timeline-item>
         </ui5-timeline>
     </ui5-panel>
       
       `;
     }
-
 }
 
 customElements.define('my-about-content', MyAboutView);
