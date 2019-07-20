@@ -1,13 +1,15 @@
-import { LitElement, html } from 'lit-element';
-import "@ui5/webcomponents/dist/Panel";
-import "@ui5/webcomponents/dist/Title";
-import "@ui5/webcomponents/dist/Label"
+import {LitElement, html} from 'lit-element';
+import '@ui5/webcomponents/dist/Panel';
+import '@ui5/webcomponents/dist/Title';
+import '@ui5/webcomponents/dist/Label';
 
-
+/**
+ * Header Panel
+ */
 class MyHeaderPanel extends LitElement {
-
-    render() {
-        return html`
+  // eslint-disable-next-line require-jsdoc
+  render() {
+    return html`
     
     <ui5-panel fixed="true">
         <ui5-title level="H3">My cloud playground</ui5-title>
@@ -15,7 +17,7 @@ class MyHeaderPanel extends LitElement {
         <ui5-label>Version Backend 0.1.0</ui5-label>
     </ui5-panel>   
       `;
-    }
+  }
 }
 
 customElements.define('my-header-panel', MyHeaderPanel);

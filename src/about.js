@@ -1,16 +1,19 @@
-import { LitElement, html } from 'lit-element';
-import "@ui5/webcomponents/dist/Panel";
-import "@ui5/webcomponents/dist/Title";
-import "@ui5/webcomponents/dist/Timeline";
-import "@ui5/webcomponents/dist/TimelineItem";
-import "@ui5/webcomponents/dist/Label";
-import "./my-header";
-import "./my-header-panel";
+import {LitElement, html} from 'lit-element';
+import '@ui5/webcomponents/dist/Panel';
+import '@ui5/webcomponents/dist/Title';
+import '@ui5/webcomponents/dist/Timeline';
+import '@ui5/webcomponents/dist/TimelineItem';
+import '@ui5/webcomponents/dist/Label';
+import './my-header';
+import './my-header-panel';
 
+/**
+ * About View
+ */
 class MyAboutView extends LitElement {
-
-    render() {
-        return html`
+  // eslint-disable-next-line require-jsdoc
+  render() {
+    return html`
     <my-header pageTitle="About" showBackIcon></my-header>
     <my-header-panel></my-header-panel>
     <ui5-panel header-text="Changelog">
@@ -28,7 +31,7 @@ class MyAboutView extends LitElement {
     </ui5-panel>
       
       `;
-    }
+  }
 }
 
 customElements.define('my-about-content', MyAboutView);

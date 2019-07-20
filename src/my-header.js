@@ -1,31 +1,38 @@
-import { LitElement, html } from 'lit-element';
-import "@ui5/webcomponents/dist/ShellBar";
+import '@ui5/webcomponents/dist/ShellBar';
+import {html, LitElement} from 'lit-element';
 
+/**
+ * Header Element
+ */
 class MyHeader extends LitElement {
-
+  // eslint-disable-next-line require-jsdoc
   static get properties() {
-    return { pageTitle: { type: String},
-             showBackIcon: {type: Boolean}
-     };
+    return {
+      pageTitle: {type: String},
+      showBackIcon: {type: Boolean},
+    };
   }
 
+  // eslint-disable-next-line require-jsdoc
   constructor() {
     super();
     this.pageTitle = 'PageTitle';
     this.showBackIcon = false;
   }
 
+  // eslint-disable-next-line require-jsdoc
   render() {
     return html`
     <ui5-shellbar id="shellbar" 
-    primary-title="My Cloud Playground" 
-    secondary-title="${this.pageTitle}" show-product-switch
-      show-notifications 
-      logo="./logo.png" 
-      @productSwitchClick="${this.handleClick}"
+      primary-title="My Cloud Playground" 
+      secondary-title="${this.pageTitle}" 
+      show-product-switch
+      show-notifications logo="./logo.png" 
+      @productSwitchClick="${this.handleClick}" 
       @logoClick="${this.goHome}">
-      ${this.showBackIcon? html`<ui5-icon src="nav-back" slot="icon" @click="${this.goHome}"></ui5-icon>`:html``}
-      
+      ${this.showBackIcon ? html`
+        <ui5-icon src="nav-back" slot="icon"
+           @click="${this.goHome}"></ui5-icon>` : html``}
     </ui5-shellbar>
     
     <ui5-popover id="popover" placement-type="Bottom">
@@ -43,37 +50,69 @@ class MyHeader extends LitElement {
     `;
   }
 
+  /**
+   * lorem ipsum
+   * @param {*} e
+   */
   handleClick(e) {
-    let popover = this.shadowRoot.getElementById('popover');
+    const popover = this.shadowRoot.getElementById('popover');
     popover.openBy(e.detail.targetRef);
   }
 
-  goHome(e) {
-    window.location = "./index.html"
+  /**
+  * foo
+  * @param {*} e
+  */
+  goHome() {
+    window.location = './index.html';
   }
 
-  openKeycloak(e) {
-    window.location = "https://oidc-mam-23701.apps.us-west-2.online-starter.openshift.com"
+  /**
+   * foo
+   * @param {*} e
+   */
+  openKeycloak() {
+    window.location = 'https://oidc-mam-23701.apps.us-west-2.online-starter.openshift.com';
   }
 
-  openQuarkus(e) {
-    window.location = "https://ssl-mam-23701.apps.us-west-2.online-starter.openshift.com"
+  /**
+   * foo
+   * @param {*} e
+   */
+  openQuarkus() {
+    window.location = 'https://ssl-mam-23701.apps.us-west-2.online-starter.openshift.com';
   }
 
-  openTest(e) {
-    window.location = "./test.html"
+  /**
+   * foo
+   * @param {*} e
+   */
+  openTest() {
+    window.location = './test.html';
   }
 
-  openFetch(e) {
-    window.location = "./fetch.html"
+  /**
+   * foo
+   * @param {*} e
+   */
+  openFetch() {
+    window.location = './fetch.html';
   }
 
-  openAbout(e) {
-    window.location = "./about.html"
+  /**
+   * foo
+   * @param {*} e
+   */
+  openAbout() {
+    window.location = './about.html';
   }
 
-  openGithub(e) {
-    window.location = "https://moewes.github.io/mycloudplayground"
+  /**
+   * foo
+   * @param {*} e
+   */
+  openGithub() {
+    window.location = 'https://moewes.github.io/mycloudplayground';
   }
 }
 
