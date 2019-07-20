@@ -1,5 +1,6 @@
 import cpy from 'rollup-plugin-cpy';
 import resolve from 'rollup-plugin-node-resolve';
+import replace from 'rollup-plugin-replace';
 
 export default [{input: './src/app.js',
   output: {
