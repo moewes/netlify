@@ -12,7 +12,7 @@ export default [{input: './src/app.js',
     // commonjs()
     cpy({
     // copy over all images files
-      files: ['./src/**/*.html', './src/**/*.png', './src/**/*.css', './config.json'],
+      files: ['./src/**/*.html', './src/**/*.png', './src/**/*.css'],
       dest: 'dist',
       options: {
       // parents makes sure to preserve the original folder structure
@@ -28,10 +28,6 @@ export default [{input: './src/app.js',
   },
   plugins: [
     resolve(),
-    replace( {
-      exclude: 'node/modules/**',
-      ENV: 'prod',
-    }),
   ],
 },
 
@@ -74,6 +70,10 @@ export default [{input: './src/app.js',
   },
   plugins: [
     resolve(),
+    replace( {
+      exclude: 'node/modules/**',
+      ENV: JSON.stringify(process.env.ENV || 'http://localhost:8080'),
+    }),
   ],
 },
 // Meine Komponenten
