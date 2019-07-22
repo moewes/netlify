@@ -1,5 +1,5 @@
 
-let _url = null;
+let _url = ENV;
 if (typeof ENV == 'undefined') {
   _url = 'http://localhost:8080';
 } else {
