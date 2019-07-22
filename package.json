@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "owc-dev-server --port 8000",
-    "build": "rimraf dist && ENV=https://ssl-mam-23701.apps.us-west-2.online-starter.openshift.com/people rollup -c rollup.config.js"
+    "build": "rimraf dist && ENV=https://ssl-mam-23701.apps.us-west-2.online-starter.openshift.com/ rollup -c rollup.config.js"
   },
   "author": "",
   "license": "ISC",
