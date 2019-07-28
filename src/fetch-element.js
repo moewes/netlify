@@ -7,7 +7,6 @@ import {URL} from './config';
  * Fetch Element
  */
 class FetchingData extends LitElement {
-
   // eslint-disable-next-line require-jsdoc
   static get properties() {
     return {
