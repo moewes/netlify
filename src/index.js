@@ -1,12 +1,15 @@
-import { LitElement, html } from 'lit-element';
-import "@ui5/webcomponents/dist/Button";
-import "@ui5/webcomponents/dist/Panel";
-import "@ui5/webcomponents/dist/Title";
-import "./my-header";
-import "./my-header-panel";
+import {LitElement, html} from 'lit-element';
+import '@ui5/webcomponents/dist/Button';
+import '@ui5/webcomponents/dist/Panel';
+import '@ui5/webcomponents/dist/Title';
+import './my-header';
+import './my-header-panel';
 
+/**
+ * Main View
+ */
 class MyMainView extends LitElement {
-
+  // eslint-disable-next-line require-jsdoc
   render() {
     return html`
     <my-header pageTitle="Home"></my-header>
@@ -26,12 +29,20 @@ class MyMainView extends LitElement {
     `;
   }
 
+  /**
+   * Calls test page
+   * @param {*} e
+   */
   startTestseite(e) {
-    window.location = "./test.html";
+    window.location = './test.html';
   }
 
+  /**
+   * Calls fetch test page
+   * @param {*} e
+   */
   startFetch(e) {
-    window.location = "./fetch.html";
+    window.location = './fetch.html';
   }
 }
 

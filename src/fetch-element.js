@@ -48,7 +48,8 @@ class FetchingData extends LitElement {
             <ui5-table-column slot="columns" width="12em">
               <span style="line-height: 1.4rem">Name</span>
             </ui5-table-column>
-            <ui5-table-column slot="columns" min-width="800" popin-text="Supplier">
+            <ui5-table-column slot="columns" min-width="800" 
+            popin-text="Supplier">
               <span style="line-height: 1.4rem">Vorname</span>
             </ui5-table-column>
             ${response.map((item) => html`

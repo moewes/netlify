@@ -1,4 +1,4 @@
-import {LitElement, html} from 'lit-element';
+import {LitElement} from 'lit-element';
 import './my-header-panel';
 
 /**

@@ -1,30 +1,32 @@
-import { LitElement, html } from 'lit-element';
+import {LitElement, html} from 'lit-element';
 
-
+/**
+ * test for communication between elements
+ */
 class MyProxyElement extends LitElement {
+  // eslint-disable-next-line require-jsdoc
+  static get properties() {
+    return {pageTitle: {type: String},
+      showBackIcon: {type: Boolean},
+    };
+  }
 
-    static get properties() {
-        return { pageTitle: { type: String},
-                 showBackIcon: {type: Boolean}
-         };
-      }
-
-    render() {
-        return html`
+  // eslint-disable-next-line require-jsdoc
+  render() {
+    return html`
     <div>ich bin ein Proxy-Element</div>
       `;
-    }
+  }
 
-    tuWas() {
-        alert("Hallo View");
-        
-    }
+  // eslint-disable-next-line require-jsdoc
+  tuWas() {
+    alert('Hallo View');
+  }
 
-    getAll() {
+  // eslint-disable-next-line require-jsdoc
+  getAll() {
 
-    }
-
-    
+  }
 }
 
 customElements.define('my-proxy-element', MyProxyElement);
